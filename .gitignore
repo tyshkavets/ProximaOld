@@ -1,0 +1,5 @@
+*.suo
+Proxima/*/bin/Debug
+Proxima/*/bin/Release
+Proxima/*/obj/Debug
+Proxima/*/obj/Release
