@@ -111,7 +111,7 @@
         }
 
         /// <summary>
-        /// Program Counter Register EX
+        /// Excess Register EX
         /// </summary>
         public uint EX
         {
