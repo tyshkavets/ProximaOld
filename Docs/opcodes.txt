@@ -1,0 +1,54 @@
+0x00	n/a				absence of instruction
+0x01	SET #1, #2		Sets #1 to #2
+0x02	ADD #1, #2  	Sets #1 to #1+#2, sets EX to 0x00000001 if there's an overflow
+0x03 	SUB #1, #2 		Sets #1 to #1-#2, sets EX to 0xFFFFFFFF is there's an underflow
+0x04	MUL #1, #2		Sets #1 to #1*#2, sets EX to ((#1*#2)>>32)&0xFFFFFFFF, both arguments are unsigned
+0x05	MLI #1, #2		Sets #1 to #1*#2, sets EX to ((#1*#2)>>32)&0xFFFFFFFF, both arguments are signed
+0x06	DIV #1, #2		Sets #1 to #1/#2, if #2 = 0, generates processor interrupt, both arguments are unsigned
+0x07	DVI #1, #2		Sets #1 to #1/#2, if #2 = 0, generates processor interrupt, both arguments are signed
+0x08	MOD #1, #2		Sets #1 to #1%#2, if #2 = 0, generates processor interrupt, both arguments are unsigned
+0x09	MDI #1, #2  	Sets #1 to #1%#2, if #2 = 0, generates processor interrupt, both arguments are signed
+0x0A	AND #1, #2		Sets #1 to #1&#2
+0x0B	BOR #1, #2		Sets #1 to #1|#2
+0x0C	XOR #1, #2		Sets #1 to #1^#2
+0x0D	LSH #1, #2		Sets #1 to #1<<#2
+0x0E	RSH #1, #2		Sets #1 to #1>>#2
+0x0F	ARSH #1, #2		Sets #1 to #1>>>#2
+
+0x10	CMP #1, #2		Compares two values #1=#2 by (signed) subtraction. sets SF, ZF, PF 
+0x11	TEST #1, #2		Logical comparison
+0x12	JEQ #1			Jump if equal
+0x13	JNEQ #1			Jump if not equal
+0x14	JB	#1			Jump if below
+0x15	JBEQ #1			Jump if below or equal
+0x16	JA	#1			Jump if above
+0x17	JAEQ #1			Jump if above or equal
+0x18	JL	#1			Jump if less
+0x19	JLEQ #1			Jump if less or equal
+0x1A	JG	#1			Jump if greater
+0x1B	JGEQ #1			Jump if greater or equal
+0x1C	JSZ	#1			Jump if SF = 0
+0x1D	JSNZ #1			Jump if SF = 1
+0x1E	JOZ	#1			Jump if OF = 0
+0x1F	JONZ #1			Jump if OF = 1
+
+0x20	JCZ	#1			Jump if CF = 0
+0x21	JCNZ #1			Jump if CF = 1
+0x22	JPZ	#1			Jump if PF = 0
+0x23	JPNZ #1			Jump if PF = 1
+0x24	JIZ	#1			Jump if I = 0
+0x25	JINZ #1			Jump if I != 0
+0x26	JJZ	#1			Jump if J = 0
+0x27	JJNZ #1			Jump if J != 0
+
+
+0x30	NOP				No operation
+0x31	JMP #1			Unconditional jump
+0x32	CALL #1			Subroutine call, push PC on stack
+0x33	RET #1			Return from subroutine, pop PC from stack and then pop #1 bytes
+
+
+
+0x40	INC #1		Adds 1 to #1
+0x41	FAA #1, #2	Fetch-and-add #1 = #1 + #2
+0x42	TSL #1 		Sets AF to 1 if lock is acquired, 0 otherwise
