@@ -14,7 +14,6 @@
         private uint _z;
 
         private uint _sp;
-        private uint _ii;
         private uint _pc;
         private uint _ex;
 
@@ -27,6 +26,12 @@
         {
             get { return _a; }
             set { _a = value; }
+        }
+
+        public uint B
+        {
+            get { return _b; }
+            set { _b = value; }
         }
 
         /// <summary>
@@ -91,16 +96,7 @@
             get { return _sp; }
             set { _sp = value; }
         }
-
-        /// <summary>
-        /// Instruction Index Register II
-        /// </summary>
-        public uint II
-        {
-            get { return _ii; }
-            set { _ii = value; }
-        }
-
+        
         /// <summary>
         /// Program Counter Register PC
         /// </summary>
