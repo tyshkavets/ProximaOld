@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Devices\IInterruptable.cs" />
     <Compile Include="Devices\IMemoryInputOutputDevice.cs" />
+    <Compile Include="Devices\SimpleMemoryInputOutputDevice.cs" />
     <Compile Include="IAtomicOperation.cs" />
     <Compile Include="IOperand.cs" />
     <Compile Include="OperandBase.cs" />
@@ -48,7 +49,10 @@
     <Compile Include="ProcessorEmulation.cs" />
     <Compile Include="ProcessorState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ByteArrayExtensions.cs" />
+    <Compile Include="Utilities\ByteExtensions.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
