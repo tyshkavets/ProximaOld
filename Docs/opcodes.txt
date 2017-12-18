@@ -1,5 +1,5 @@
 0x00	n/a				absence of instruction
-0x01	SET #1, #2		Sets #1 to #2
+0x01	MOV #1, #2		Sets #1 to #2
 0x02	ADD #1, #2  	Sets #1 to #1+#2, sets EX to 0x00000001 if there's an overflow
 0x03 	SUB #1, #2 		Sets #1 to #1-#2, sets EX to 0xFFFFFFFF is there's an underflow
 0x04	MUL #1, #2		Sets #1 to #1*#2, sets EX to ((#1*#2)>>32)&0xFFFFFFFF, both arguments are unsigned
