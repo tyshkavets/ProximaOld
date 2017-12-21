@@ -45,7 +45,6 @@
     <Compile Include="IAtomicOperation.cs" />
     <Compile Include="IOperand.cs" />
     <Compile Include="OperandBase.cs" />
-    <Compile Include="OperandType.cs" />
     <Compile Include="ProcessorEmulation.cs" />
     <Compile Include="ProcessorState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

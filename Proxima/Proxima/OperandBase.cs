@@ -1,4 +1,6 @@
-﻿namespace Proxima
+﻿using System.Reflection.Emit;
+
+namespace Proxima
 {
     public abstract class OperandBase : IOperand
     {
