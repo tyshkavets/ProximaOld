@@ -6,7 +6,7 @@ namespace Proxima.Assembler
     {
         public String Label { get; set; }
         public String Operation { get; set; }
-        public String Operands { get; set; }
+        public String RawOperands { get; set; }
         public String Comment { get; set; }
     }
 }

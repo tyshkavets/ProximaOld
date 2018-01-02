@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxima", "Proxima\Proxima.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxima.Tests", "Proxima.Tests\Proxima.Tests.csproj", "{2B0CEFD4-CEC5-4433-8D48-3AB6F4669C37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxima.Assembler", "Proxima.Assembler\Proxima.Assembler.csproj", "{97AA25DC-7E24-45A6-A4F2-60B1AA7669F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxima.Assembler", "Proxima.Assembler\Proxima.Assembler.csproj", "{C11B9BB8-C508-4B04-B2B3-689E44A5F27C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{2B0CEFD4-CEC5-4433-8D48-3AB6F4669C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B0CEFD4-CEC5-4433-8D48-3AB6F4669C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B0CEFD4-CEC5-4433-8D48-3AB6F4669C37}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97AA25DC-7E24-45A6-A4F2-60B1AA7669F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97AA25DC-7E24-45A6-A4F2-60B1AA7669F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97AA25DC-7E24-45A6-A4F2-60B1AA7669F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97AA25DC-7E24-45A6-A4F2-60B1AA7669F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C11B9BB8-C508-4B04-B2B3-689E44A5F27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11B9BB8-C508-4B04-B2B3-689E44A5F27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11B9BB8-C508-4B04-B2B3-689E44A5F27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11B9BB8-C508-4B04-B2B3-689E44A5F27C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

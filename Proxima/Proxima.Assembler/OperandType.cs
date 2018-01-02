@@ -1,4 +1,4 @@
-﻿namespace Proxima
+﻿namespace Proxima.Assembler
 {
     public enum OperandType
     {
