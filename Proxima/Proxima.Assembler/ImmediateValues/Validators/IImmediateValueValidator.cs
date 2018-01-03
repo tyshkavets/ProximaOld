@@ -1,4 +1,4 @@
-﻿namespace Proxima.Assembler.ImmediateValueParsers
+﻿namespace Proxima.Assembler.ImmediateValues.Validators
 {
     public interface IImmediateValueValidator
     {

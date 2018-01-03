@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Proxima.Assembler.ImmediateValueParsers
+namespace Proxima.Assembler.ImmediateValues.Validators
 {
     // Binary value is okay if
     // 1) It either starts with 0b or ends with b, but not both simultaneously.
@@ -11,19 +10,19 @@ namespace Proxima.Assembler.ImmediateValueParsers
     {
         private static readonly List<char> allowedSymbols = new List<char> {'_', '0', '1'};
 
-        public bool IsValidLexeme(String rawLexeme)
+        public bool IsValidLexeme(string rawLexeme)
         {
             return CheckAllowedDigits(rawLexeme) && CheckPostfixAndPrefix(rawLexeme);
         }
 
-        private bool CheckPostfixAndPrefix(String rawLexeme)
+        private bool CheckPostfixAndPrefix(string rawLexeme)
         {
             var prefixFound = rawLexeme.StartsWith("0b");
             var postfixFound = rawLexeme.EndsWith("b");
             return prefixFound ^ postfixFound;
         }
 
-        private bool CheckAllowedDigits(String rawLexeme)
+        private bool CheckAllowedDigits(string rawLexeme)
         {
             var isInvalidSymbolFound = false;
 

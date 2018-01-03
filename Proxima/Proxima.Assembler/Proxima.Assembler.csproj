@@ -45,19 +45,19 @@
     <Compile Include="Exceptions\DuplicateLocationNameException.cs" />
     <Compile Include="Exceptions\UnknownOpcodeLexemeException.cs" />
     <Compile Include="ImmediateValueParser.cs" />
-    <Compile Include="ImmediateValueParsers\BinaryImmediateValueConverter.cs" />
-    <Compile Include="ImmediateValueParsers\BinaryImmediateValueParser.cs" />
-    <Compile Include="ImmediateValueParsers\BinaryImmediateValueValidator.cs" />
-    <Compile Include="ImmediateValueParsers\DecimalImmediateValueConverter.cs" />
-    <Compile Include="ImmediateValueParsers\DecimalImmediateValueParser.cs" />
-    <Compile Include="ImmediateValueParsers\DecimalImmediateValueValidator.cs" />
-    <Compile Include="ImmediateValueParsers\HexadecimalImmediateValueConverter.cs" />
-    <Compile Include="ImmediateValueParsers\HexadecimalImmediateValueParser.cs" />
-    <Compile Include="ImmediateValueParsers\HexadecimalImmediateValueValidator.cs" />
-    <Compile Include="ImmediateValueParsers\IImmediateValueConverter.cs" />
-    <Compile Include="ImmediateValueParsers\IImmediateValueParser.cs" />
-    <Compile Include="ImmediateValueParsers\IImmediateValueValidator.cs" />
-    <Compile Include="ImmediateValueParsers\ImmediateValueParserBase.cs" />
+    <Compile Include="ImmediateValues\Converters\BinaryImmediateValueConverter.cs" />
+    <Compile Include="ImmediateValues\Parsers\BinaryImmediateValueParser.cs" />
+    <Compile Include="ImmediateValues\Validators\BinaryImmediateValueValidator.cs" />
+    <Compile Include="ImmediateValues\Converters\DecimalImmediateValueConverter.cs" />
+    <Compile Include="ImmediateValues\Parsers\DecimalImmediateValueParser.cs" />
+    <Compile Include="ImmediateValues\Validators\DecimalImmediateValueValidator.cs" />
+    <Compile Include="ImmediateValues\Converters\HexadecimalImmediateValueConverter.cs" />
+    <Compile Include="ImmediateValues\Parsers\HexadecimalImmediateValueParser.cs" />
+    <Compile Include="ImmediateValues\Validators\HexadecimalImmediateValueValidator.cs" />
+    <Compile Include="ImmediateValues\Converters\IImmediateValueConverter.cs" />
+    <Compile Include="ImmediateValues\Parsers\IImmediateValueParser.cs" />
+    <Compile Include="ImmediateValues\Validators\IImmediateValueValidator.cs" />
+    <Compile Include="ImmediateValues\Parsers\ImmediateValueParserBase.cs" />
     <Compile Include="LexemeConstants\OpcodeLexemeConstants.cs" />
     <Compile Include="LexemeConstants\RegisterLexemeConstants.cs" />
     <Compile Include="LineLexer.cs" />
@@ -73,5 +73,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterLexemeMapping.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

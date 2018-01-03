@@ -1,4 +1,4 @@
-﻿namespace Proxima.Assembler.ImmediateValueParsers
+﻿namespace Proxima.Assembler.ImmediateValues.Converters
 {
     public interface IImmediateValueConverter
     {

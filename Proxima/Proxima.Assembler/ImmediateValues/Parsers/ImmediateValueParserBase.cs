@@ -1,4 +1,7 @@
-﻿namespace Proxima.Assembler.ImmediateValueParsers
+﻿using Proxima.Assembler.ImmediateValues.Converters;
+using Proxima.Assembler.ImmediateValues.Validators;
+
+namespace Proxima.Assembler.ImmediateValues.Parsers
 {
     public abstract class ImmediateValueParserBase : IImmediateValueParser
     {

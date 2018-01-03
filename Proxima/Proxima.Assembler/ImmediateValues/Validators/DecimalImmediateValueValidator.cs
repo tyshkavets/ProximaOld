@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Proxima.Assembler.ImmediateValueParsers
+namespace Proxima.Assembler.ImmediateValues.Validators
 {
     // 1) 10 decimal digits are allowed
     // 2) Underscore is allowed to be used as a separator between digits for readability

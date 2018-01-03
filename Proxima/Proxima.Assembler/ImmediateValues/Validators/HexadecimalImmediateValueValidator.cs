@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Proxima.Assembler.ImmediateValueParsers
+namespace Proxima.Assembler.ImmediateValues.Validators
 {
     // Hexadecimal value is okay if
     // 1) It either starts with 0x or ends with h, but not both simultaneously.
@@ -17,19 +16,19 @@ namespace Proxima.Assembler.ImmediateValueParsers
             'a', 'b', 'c', 'd', 'e', 'f' // lowercase hexadecimal digits
         };
 
-        public bool IsValidLexeme(String rawLexeme)
+        public bool IsValidLexeme(string rawLexeme)
         {
             return CheckAllowedDigits(rawLexeme) && CheckPostfixAndPrefix(rawLexeme);
         }
 
-        private bool CheckPostfixAndPrefix(String rawLexeme)
+        private bool CheckPostfixAndPrefix(string rawLexeme)
         {
             var prefixFound = rawLexeme.StartsWith("0x");
             var postfixFound = rawLexeme.EndsWith("h");
             return prefixFound ^ postfixFound;
         }
 
-        private bool CheckAllowedDigits(String rawLexeme)
+        private bool CheckAllowedDigits(string rawLexeme)
         {
             var isInvalidSymbolFound = false;
 
