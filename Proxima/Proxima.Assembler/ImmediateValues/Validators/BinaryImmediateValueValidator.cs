@@ -33,7 +33,7 @@ namespace Proxima.Assembler.ImmediateValues.Validators
             }
             if (trimmedLexeme.EndsWith("b"))
             {
-                trimmedLexeme = trimmedLexeme.Substring(0, rawLexeme.Length - 1);
+                trimmedLexeme = trimmedLexeme.Substring(0, trimmedLexeme.Length - 1);
             }
 
             foreach (var character in trimmedLexeme.ToCharArray())

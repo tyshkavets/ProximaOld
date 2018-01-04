@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Proxima.Tests</RootNamespace>
     <AssemblyName>Proxima.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -19,6 +19,7 @@
     <TestProjectType>UnitTest</TestProjectType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +46,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assembler\ImmediateValues\Converters\BinaryImmediateValueConverterTests.cs" />
+    <Compile Include="Assembler\ImmediateValues\Converters\BinaryImmediateValueValidatorTests.cs" />
+    <Compile Include="Assembler\ImmediateValues\Converters\HexadecimalImmediateValueConverterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\ByteArrayExtensionsTests.cs" />
     <Compile Include="Utilities\ByteExtensionsTests.cs" />
@@ -53,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Proxima.Assembler\Proxima.Assembler.csproj">
+      <Project>{c11b9bb8-c508-4b04-b2b3-689e44a5f27c}</Project>
+      <Name>Proxima.Assembler</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Proxima\Proxima.csproj">
       <Project>{B8EA4700-6C95-436C-886F-05A6C9420938}</Project>
       <Name>Proxima</Name>
