@@ -12,31 +12,38 @@ namespace Proxima.Assembler.ImmediateValues.Validators
 
         public bool IsValidLexeme(string rawLexeme)
         {
-            return CheckAllowedDigits(rawLexeme) && CheckPostfixAndPrefix(rawLexeme);
+            return IsValidPrefixForm(rawLexeme) ^ IsValidPostfixForm(rawLexeme);
         }
 
-        private bool CheckPostfixAndPrefix(string rawLexeme)
+        private bool IsValidPrefixForm(string rawLexeme)
         {
-            var prefixFound = rawLexeme.StartsWith("0b");
-            var postfixFound = rawLexeme.EndsWith("b");
-            return prefixFound ^ postfixFound;
+            var prefixFound = rawLexeme.StartsWith("0b") && rawLexeme.Length > 2;
+            if (!prefixFound)
+            {
+                return false;
+            }
+
+            var trimmedLexeme = rawLexeme.Substring(2);
+            return CheckAllowedDigits(trimmedLexeme);
         }
 
-        private bool CheckAllowedDigits(string rawLexeme)
+        private bool IsValidPostfixForm(string rawLexeme)
+        {
+            var postfixFound = rawLexeme.EndsWith("b") && rawLexeme.Length > 1;
+            if (!postfixFound)
+            {
+                return false;
+            }
+
+            var trimmedLexeme = rawLexeme.Substring(0, rawLexeme.Length - 1);
+            return CheckAllowedDigits(trimmedLexeme);
+        }
+        
+        private bool CheckAllowedDigits(string lexeme)
         {
             var isInvalidSymbolFound = false;
-
-            var trimmedLexeme = rawLexeme;
-            if (trimmedLexeme.StartsWith("0b"))
-            {
-                trimmedLexeme = trimmedLexeme.Substring(2);
-            }
-            if (trimmedLexeme.EndsWith("b"))
-            {
-                trimmedLexeme = trimmedLexeme.Substring(0, trimmedLexeme.Length - 1);
-            }
-
-            foreach (var character in trimmedLexeme.ToCharArray())
+            
+            foreach (var character in lexeme.ToCharArray())
             {
                 if (!allowedSymbols.Contains(character))
                 {

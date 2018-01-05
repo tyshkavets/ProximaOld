@@ -12,15 +12,35 @@ namespace Proxima.Assembler.ImmediateValues.Validators
 
         public bool IsValidLexeme(string rawLexeme)
         {
-            var isInvalidSymbolFound = false;
+            return IsValidNoAffixForm(rawLexeme) ^ IsValidPostfixForm(rawLexeme);
+        }
 
-            var trimmedLexeme = rawLexeme;
-            if (trimmedLexeme.EndsWith("d"))
+        private bool IsValidNoAffixForm(string rawLexeme)
+        {
+            if (rawLexeme.Length == 0)
             {
-                trimmedLexeme = trimmedLexeme.Substring(0, rawLexeme.Length - 1);
+                return false;
             }
 
-            foreach (var character in trimmedLexeme.ToCharArray())
+            return CheckAllowedDigits(rawLexeme);
+        }
+
+        private bool IsValidPostfixForm(string rawLexeme)
+        {
+            if (rawLexeme.EndsWith("d") && rawLexeme.Length > 1)
+            {
+                return CheckAllowedDigits(rawLexeme.Substring(0, rawLexeme.Length - 1));
+            }
+
+            return false;
+        }
+
+        private bool CheckAllowedDigits(string lexeme)
+        {
+            var isInvalidSymbolFound = false;
+            
+
+            foreach (var character in lexeme.ToCharArray())
             {
                 if (!allowedSymbols.Contains(character))
                 {
