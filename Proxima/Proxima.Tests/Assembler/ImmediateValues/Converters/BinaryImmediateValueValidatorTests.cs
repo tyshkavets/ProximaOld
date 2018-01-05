@@ -68,5 +68,13 @@ namespace Proxima.Tests.Assembler.ImmediateValues.Converters
             var result = validator.IsValidLexeme("0b");
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void EmptyPrefixAndPostfixFormIsInvalid()
+        {
+            var validator = new BinaryImmediateValueValidator();
+            var result = validator.IsValidLexeme("0bb");
+            Assert.IsFalse(result);
+        }
     }
 }
