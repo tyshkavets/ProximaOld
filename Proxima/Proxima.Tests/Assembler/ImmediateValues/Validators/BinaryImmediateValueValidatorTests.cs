@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Proxima.Assembler.ImmediateValues.Validators;
 
-namespace Proxima.Tests.Assembler.ImmediateValues.Converters
+namespace Proxima.Tests.Assembler.ImmediateValues.Validators
 {
     public class BinaryImmediateValueValidatorTests
     {
