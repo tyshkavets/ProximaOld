@@ -8,7 +8,7 @@ namespace Proxima.Assembler.ImmediateValues.Parsers
         protected IImmediateValueValidator Validator = null;
         protected IImmediateValueConverter Converter = null;
 
-        public (bool, ulong?) ParseLexeme(string rawLexeme)
+        public (bool CanBeParsed, ulong? Value) ParseLexeme(string rawLexeme)
         {
             if (!Validator.IsValidLexeme(rawLexeme))
             {

@@ -2,6 +2,6 @@
 {
     public interface IImmediateValueParser
     {
-        (bool, ulong?) ParseLexeme(string rawLexeme);
+        (bool CanBeParsed, ulong? Value) ParseLexeme(string rawLexeme);
     }
 }

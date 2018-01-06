@@ -52,6 +52,7 @@
     <Compile Include="Assembler\ImmediateValues\Converters\DecimalImmediateValueValidatorTests.cs" />
     <Compile Include="Assembler\ImmediateValues\Converters\HexadecimalImmediateValueConverterTests.cs" />
     <Compile Include="Assembler\ImmediateValues\Converters\HexadecimalImmediateValueValidatorTests.cs" />
+    <Compile Include="Assembler\ImmediateValues\ImmediateValueLexerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\ByteArrayExtensionsTests.cs" />
     <Compile Include="Utilities\ByteExtensionsTests.cs" />

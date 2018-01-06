@@ -44,7 +44,7 @@
     <Compile Include="Exceptions\CannotResolveLocationException.cs" />
     <Compile Include="Exceptions\DuplicateLocationNameException.cs" />
     <Compile Include="Exceptions\UnknownOpcodeLexemeException.cs" />
-    <Compile Include="ImmediateValueParser.cs" />
+    <Compile Include="ImmediateValues\ImmediateValueLexer.cs" />
     <Compile Include="ImmediateValues\Converters\BinaryImmediateValueConverter.cs" />
     <Compile Include="ImmediateValues\Parsers\BinaryImmediateValueParser.cs" />
     <Compile Include="ImmediateValues\Validators\BinaryImmediateValueValidator.cs" />
