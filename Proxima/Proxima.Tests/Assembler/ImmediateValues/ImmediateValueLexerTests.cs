@@ -68,5 +68,21 @@ namespace Proxima.Tests.Assembler.ImmediateValues
             var result = lexeme.GetImmediateValue("DAFFODILS!");
             Assert.IsNull(result);
         }
+
+        [Test]
+        public void EmptyStringDoesNotParse()
+        {
+            var lexeme = new ImmediateValueLexer();
+            var result = lexeme.GetImmediateValue("");
+            Assert.IsNull(result);
+        }
+
+        [Test]
+        public void OverflowTest()
+        {
+            var lexeme = new ImmediateValueLexer();
+            var result = lexeme.GetImmediateValue("0xFFFFFFFFFFFFFFFFFF");
+            Assert.IsNull(result);
+        }
     }
 }

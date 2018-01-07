@@ -6,8 +6,6 @@ namespace Proxima.Assembler.ImmediateValues
 {
     public class ImmediateValueLexer
     {
-        // TODO: Overflow handling
-
         // TODO: byte/word/dword options
 
         private readonly List<IImmediateValueParser> _supportedParsers =
@@ -30,9 +28,9 @@ namespace Proxima.Assembler.ImmediateValues
                         return true;
                     }
                 }
-                catch (Exception e)
+                catch (OverflowException)
                 {
-                    continue;
+                    return false;
                 }
             }
 
@@ -51,9 +49,9 @@ namespace Proxima.Assembler.ImmediateValues
                         return result.Value;
                     }
                 }
-                catch (Exception e)
+                catch (OverflowException)
                 {
-                    continue;
+                    return null;
                 }
             }
 
